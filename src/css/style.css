@@ -4,6 +4,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*----------- apply a natural box layout model to all elements --------------*/
@@ -17,6 +18,38 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fffffa;
+}
+
+#container1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+#subcontainer1 {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+#subcontainer1 h2 {
+  font-size: 18px;
+}
+
+#subcontainer1 img {
+  display: none;
+}
+
+footer {
+  background-color: #0d5c63;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 @media only screen and (min-width: 35rem) {
