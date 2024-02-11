@@ -3,25 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" type="module"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" type="module"></script>
     <title>Employee App</title>
   </head>
   <body>
     <main>
       <div id="container1">
         <div id="subcontainer1">
-          <h2>
-            Discover the ease of managing your workforce with Employee App –
-            your all-in-one solution for efficient HR management.
-          </h2>
+          <h2>Employee App</h2>
+          <h3>Your all-in-one solution for efficient HR management</h3>
+
           <img
             src="/images/login.png"
             alt="
           A magnifying glass looking at records"
           />
         </div>
-        <div id="subcontainer2"></div>
+        <div id="subcontainer2">
+          <form id="loginForm">
+            <fieldset>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required />
+              <label for="password">Password</label>
+              <input id="password" type="password" name="password" required />
+              <button id="loginBtn">Login</button>
+              <div>
+                <p>
+                  Don't have an account?
+                  <a href="./createAccount/">Sign Up.</a>
+                </p>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </main>
     <footer>

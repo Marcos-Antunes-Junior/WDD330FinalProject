@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/createAccount.js" type="module"></script>
+    <title>Create Account</title>
+  </head>
+  <body>
+    <header id="createAccountHeader">
+      <a href="../">Employee APP</a>
+    </header>
+    <main>
+      <div id="signUpContainer">
+        <h2>Create Account</h2>
+        <form id="createAccountForm">
+          <fieldset>
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" required />
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required />
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required />
+            <button id="newAccountBtn" type="submit">Create Account</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>©<span id="year"></span> Marcos Antunes</p>
+    </footer>
+  </body>
+</html>
