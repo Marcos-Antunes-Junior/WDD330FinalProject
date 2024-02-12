@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'src/index.html'),
         signup: resolve(__dirname, "src/createAccount/index.html"),
+        home: resolve(__dirname, "src/home/index.html"),
       },
     },
   },

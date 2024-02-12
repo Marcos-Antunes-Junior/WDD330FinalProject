@@ -3,6 +3,7 @@ function handleFormSubmission() {
         event.preventDefault();
 
         const formData = new FormData(event.target);
+        document.getElementById('loading').style.display = 'block';
 
         const requestBody = {};
         formData.forEach((value, key) => {
@@ -19,6 +20,7 @@ function handleFormSubmission() {
         .then(Response => {
             if (!Response.ok) {
                 throw new Error('Email exists. Please, log in or use a different email');
+
                 
             }
             return Response.json();
@@ -34,6 +36,10 @@ function handleFormSubmission() {
             console.error('There was a problem with the fetch operation.'); 
             
         })
+        .finally(() => {
+            
+            document.getElementById('loading').style.display = 'none';
+        });
     })
 }
 

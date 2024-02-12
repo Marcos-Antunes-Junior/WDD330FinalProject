@@ -211,6 +211,85 @@ footer {
   background-color: #021c03;
 }
 
+#loading {
+  display: none;
+}
+
+/* HOME PAGE */
+
+#homeContainer h2 {
+  text-align: center;
+}
+
+#createAccountHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logout {
+  margin-left: auto;
+}
+
+#createAccountHeader button {
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #051546;
+}
+
+#logout:hover {
+  background-color: #224cca;
+}
+
+#addEmployeeBtn button {
+  display: none;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #051546;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border: 1px solid #021c03;
+}
+
+thead {
+  display: none;
+}
+
+/* Display table rows as blocks */
+tbody,
+tr {
+  display: block;
+}
+
+/* Set background color for odd rows */
+tr:nth-child(odd) {
+  background-color: #b5b1b1;
+}
+
+/* Adjust padding for table cells */
+td {
+  padding: 8px;
+  border-top: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style table data cells */
+td:before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 35rem) {
   #container1 {
     display: grid;

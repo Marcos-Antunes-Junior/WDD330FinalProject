@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/home.js" type="module"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <header id="createAccountHeader">
+      <a href="./">Employee APP</a>
+      <button id="logout">
+        <span id="logoutText">Logout</span
+        ><span id="logoutLoading" style="display: none">Loading...</span>
+      </button>
+    </header>
+    <main>
+      <div id="homeContainer">
+        <h2 id="welcome"></h2>
+        <p id="loading"></p>
+        <button id="addEmployeeBtn">Add employee</button>
+        <div id="employeeTable"></div>
+      </div>
+    </main>
+    <footer>
+      <p>©<span id="year"></span> Marcos Antunes</p>
+    </footer>
+  </body>
+</html>
