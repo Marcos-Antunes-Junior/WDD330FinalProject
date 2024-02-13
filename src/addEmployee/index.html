@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/addEmployee.js" type="module"></script>
+    <title>Add Employee</title>
+  </head>
+  <body>
+    <header id="createAccountHeader">
+      <a href="../home/">Employee APP</a>
+      <button id="logout">
+        <span id="logoutText">Logout</span
+        ><span id="logoutLoading" style="display: none">Loading...</span>
+      </button>
+    </header>
+    <main>
+      <div id="addContainer">
+        <h2>Add employee data</h2>
+        <form id="addDataForm">
+          <fieldset>
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" name="firstName" required />
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text" name="lastName" required />
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required />
+            <label for="phone">Phone</label>
+            <input id="phoneNumber" type="tel" name="phoneNumber" required />
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required />
+            <label for="jobPosition">Job Position</label>
+            <input id="jobPosition" type="text" name="jobPosition" required />
+            <label for="salary">Salary</label>
+            <input type="number" id="salary" name="salary" required />
+            <p id="loading">Loading...</p>
+            <button id="addDataBtn" type="submit">Add Data</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>©<span id="year"></span> Marcos Antunes</p>
+    </footer>
+  </body>
+</html>

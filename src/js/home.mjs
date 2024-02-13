@@ -2,7 +2,6 @@
 function handleHomePage() {
 
     const token = localStorage.getItem('token'); 
-    const button = document.getElementById('addEmployeeBtn');
     document.getElementById('loading').style.display = 'block';
     async function fetchEmployees() {
         try {
@@ -25,17 +24,17 @@ function handleHomePage() {
         displayEmployees(employees);
     } catch (error) {
     console.error('Error fetching employees:', error);
-    const employeeTable = document.getElementById('employeeTable');
+    let employeeTable = document.getElementById('employeeTable');
     employeeTable = innerHTML = "Not allowed. Please, log in first."
     }finally {
-        document.getElementById('loading').style.display = 'none';
-        button.style.display = 'block';
-       }
+    document.getElementById('loading').style.display = 'none';
+    }
 }
 
 function displayEmployees(employees) {
-    const employeeTable = document.getElementById('employeeTable');
+    let employeeTable = document.getElementById('employeeTable');
     const tableHTML = `
+    <button id="addEmployeeBtn">Add employee</button>
         <table>
             <thead>
                 <tr>
@@ -43,15 +42,14 @@ function displayEmployees(employees) {
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Birthday</th>
-                    <th>jobPosition</th>
+                    <th>job Position</th>
                     <th>salary</th>
-                    <!-- Add more columns as needed -->
                 </tr>
             </thead>
             <tbody>
                 ${employees.map(employee => `
                     <tr>
-                        <td><a href="/employee/?${employee._id}" class="employeeLink" data-id="${employee._id}">${employee.firstName} ${employee.lastName}</a></td>
+                        <td><a href="/employee/?id=${employee._id}" class="employeeLink" data-id="${employee._id}">${employee.firstName} ${employee.lastName}</a></td>
                         <td>${employee.email}</td>
                         <td>${employee.phoneNumber}</td>
                         <td>${employee.birthday}</td>
@@ -64,6 +62,9 @@ function displayEmployees(employees) {
     `;
 
     employeeTable.innerHTML = tableHTML;
+    document.getElementById("addEmployeeBtn").onclick = function () {
+        window.location.href = "../addEmployee/";
+    }
 
 }
 
