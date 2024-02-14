@@ -1,3 +1,6 @@
+import { handleUpdateData } from "./updateEmployee.mjs";
+import { handleDeleteData } from "./deleteEmployee.mjs";
+
 function handleEmployeePage() {
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -35,6 +38,7 @@ document.getElementById('loading').style.display = 'none';
 
 function displayEmployeeData(employee) {
     const employeeData = document.getElementById('employeeData');
+    const employeeBirthday = employee.birthday.split('T')[0];
     const formHTML = `
     <form id="addDataForm">
     <fieldset>
@@ -47,20 +51,28 @@ function displayEmployeeData(employee) {
       <label for="phone">Phone</label>
       <input id="phoneNumber" type="tel" name="phoneNumber" value=${employee.phoneNumber} required />
       <label for="birthday">Birthday:</label>
-      <input type="date" id="birthday" name="birthday" value=${employee.birthday} required />
+      <input type="date" id="birthday" name="birthday" value=${employeeBirthday} required />
       <label for="jobPosition">Job Position</label>
-      <input id="jobPosition" type="text" name="jobPosition" value=${employee.jobPosition} required />
+      <input id="jobPosition" type="text" name="jobPosition" value=
+      '${employee.jobPosition}' required />
       <label for="salary">Salary</label>
       <input type="number" id="salary" name="salary" value=${employee.salary} required />
       <p id="loading">Loading...</p>
       <button id="updateDataBtn" type="submit">Update Data</button>
     </fieldset>
-    <button id="deleteDataBtn" >Delete Data</button>
   </form>
+  <div id="deleteContainer">
+  <button id="deleteDataBtn" ><span id="deleteText">Delete Data</span
+  ><span id="deleteLoading" style="display: none">Loading...</span></button>
+  </div>
+
 
     `;
 
     employeeData.innerHTML = formHTML;
+
+    handleUpdateData();
+    handleDeleteData();
 
 
 }
@@ -68,6 +80,10 @@ function displayEmployeeData(employee) {
 
 
 window.addEventListener('load', fetchEmployee);
+
+
+
+
 
 }
 

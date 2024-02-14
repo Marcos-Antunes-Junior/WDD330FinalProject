@@ -23,7 +23,7 @@ function handleUpdateData() {
             'Authorization': `${token}`
           },
           credentials: 'include',
-          body: employeeData
+          body: JSON.stringify(employeeData)
         });
   
         if (!response.ok) {
@@ -33,6 +33,7 @@ function handleUpdateData() {
         const data = await response.json();
         console.log('Employee data updated:', data);
         alert('Data Updated!');
+        window.location.href = '../home/';
 
       } catch (error) {
         console.error('Error updating employee data:', error);
@@ -41,7 +42,7 @@ function handleUpdateData() {
       }
     });
 
-    
+  
 }
 
 export {handleUpdateData}

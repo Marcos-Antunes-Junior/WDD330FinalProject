@@ -378,6 +378,21 @@ td:before {
   background-color: #021c03;
 }
 
+#deleteContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: -8%;
+}
+
+#deleteContainer button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 #deleteDataBtn {
   background-color: red;
   transition: background-color 0.3s ease;

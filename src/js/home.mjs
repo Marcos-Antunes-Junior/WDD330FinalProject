@@ -33,6 +33,7 @@ function handleHomePage() {
 
 function displayEmployees(employees) {
     let employeeTable = document.getElementById('employeeTable');
+    
     const tableHTML = `
     <button id="addEmployeeBtn">Add employee</button>
         <table>
@@ -52,7 +53,7 @@ function displayEmployees(employees) {
                         <td><a href="/employee/?id=${employee._id}" class="employeeLink" data-id="${employee._id}">${employee.firstName} ${employee.lastName}</a></td>
                         <td>${employee.email}</td>
                         <td>${employee.phoneNumber}</td>
-                        <td>${employee.birthday}</td>
+                        <td>${employee.birthday.split('T')[0]}</td>
                         <td>${employee.jobPosition}</td>
                         <td>$${employee.salary}</td>
                     </tr>
