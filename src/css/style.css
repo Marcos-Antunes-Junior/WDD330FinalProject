@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*----------- apply a natural box layout model to all elements --------------*/
@@ -76,8 +76,8 @@ body {
   margin-top: 10px;
 }
 
-#loginForm input[type='email'],
-#loginForm input[type='password'] {
+#loginForm input[type="email"],
+#loginForm input[type="password"] {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
@@ -175,9 +175,9 @@ footer {
   margin-top: 10px;
 }
 
-#createAccountForm input[type='email'],
-#createAccountForm input[type='password'],
-#createAccountForm input[type='text'] {
+#createAccountForm input[type="email"],
+#createAccountForm input[type="password"],
+#createAccountForm input[type="text"] {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
@@ -316,11 +316,11 @@ td:before {
   margin-top: 10px;
 }
 
-#addDataForm input[type='email'],
-#addDataForm input[type='date'],
-#addDataForm input[type='number'],
-#addDataForm input[type='text'],
-#addDataForm input[type='tel'] {
+#addDataForm input[type="email"],
+#addDataForm input[type="date"],
+#addDataForm input[type="number"],
+#addDataForm input[type="text"],
+#addDataForm input[type="tel"] {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;

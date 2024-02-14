@@ -8,15 +8,11 @@ const welcomeSpan = document.getElementById("welcome");
 
 const username = localStorage.getItem("username");
 
-
 if (username) {
   welcomeSpan.textContent = `Welcome, ${username}!`;
 } else {
-  welcomeSpan.textContent = `Not authorized. Please, log in.`
-  
+  welcomeSpan.textContent = `Not authorized. Please, log in.`;
 }
 
 handleLogout();
 handleHomePage();
-
-
