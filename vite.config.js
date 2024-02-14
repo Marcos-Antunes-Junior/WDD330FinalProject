@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, "src/index.html"),
         signup: resolve(__dirname, "src/createAccount/index.html"),
         home: resolve(__dirname, "src/home/index.html"),
+        add: resolve(__dirname,"src/addEmployee/index.html" ),
       },
     },
   },
